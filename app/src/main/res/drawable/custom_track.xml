@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape
+    xmlns:xmls="http://schemas.android.com/apk/res/android"
+    xmls:shape="rectangle"
+    xmls:visible="true"
+    xmls:dither="true"
+    xmls:useLevel="false"
+    >
+    <gradient
+        xmls:startColor="#333"
+        xmls:endColor="#333"
+        />
+    <corners
+        xmls:radius="3dp"
+        />
+    <size
+        xmls:width="120dp"
+        xmls:height="40dp"
+        />
+    <stroke
+        xmls:color="#333"
+        xmls:width="5dp"
+        />
+</shape>
