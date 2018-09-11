@@ -25,26 +25,28 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edUserID"
+            android:id="@+id/la_edUserID"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_border_edittext"
             android:padding="10dp"
-            android:text="아이디"
+            android:hint="아이디"
+            android:textColorHint="#f4f4f4"
             android:textColor="#f4f4f4"
             android:textSize="20dp"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edPassword"
+            android:id="@+id/la_edPassword"
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/rounded_border_edittext"
             android:inputType="textPassword"
             android:padding="10dp"
-            android:text="비밀번호"
+            android:hint="비밀번호"
+            android:textColorHint="#f4f4f4"
             android:textColor="#f4f4f4"
             android:textSize="20dp"
             android:textStyle="bold" />

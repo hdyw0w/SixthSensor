@@ -15,8 +15,8 @@
         xmls:radius="3dp"
         />
     <size
-        xmls:width="120dp"
-        xmls:height="40dp"
+        xmls:width="50dp"
+        xmls:height="30dp"
         />
     <stroke
         xmls:color="#333"

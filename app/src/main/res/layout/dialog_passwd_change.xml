@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="300dp"
+    android:layout_height="400dp"
+    android:orientation="vertical"
+    android:background="#f4f4f4"
+    android:paddingHorizontal="20dp"
+    >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="기존 비밀번호"
+            android:textSize="23dp"
+            android:textColor="#333"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ccc"
+            android:layout_marginTop="10dp"
+            android:id="@+id/dpc_passwd"
+            android:inputType="textPassword"
+            android:paddingHorizontal="10dp"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="새로운 비밀번호"
+            android:textSize="23dp"
+            android:textColor="#333"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ccc"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:id="@+id/dpc_newPasswd"
+            android:inputType="textPassword"
+            />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 확인"
+            android:textSize="23dp"
+            android:textColor="#333"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#ccc"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:id="@+id/dpc_rePasswd"
+            android:inputType="textPassword"
+            />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:layout_marginTop="30dp"
+        >
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="취소"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:textColor="#f4f4f4"
+            android:background="@drawable/rounded_border_button"
+            android:id="@+id/dpc_btnCancel"
+            />
+
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:id="@+id/dpc_btnSubmit"
+            android:text="확인"
+            android:textSize="17dp"
+            android:textColor="#f4f4f4"
+            android:layout_marginHorizontal="10dp"
+            android:textStyle="bold"
+            android:background="@drawable/rounded_border_button"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

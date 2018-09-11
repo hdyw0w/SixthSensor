@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.ac.kopo.hdyw0w.sixthsensor">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,6 +20,8 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".NavActivity" />
+        <activity android:name=".JoinActivity" />
+        <activity android:name=".ChangePassActivity" android:theme="@style/CustomDialog"/>
     </application>
 
 </manifest>

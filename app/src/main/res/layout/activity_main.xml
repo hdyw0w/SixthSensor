@@ -22,7 +22,7 @@
         style="@style/Widget.AppCompat.Button"
         android:layout_width="match_parent"
         android:height="70dp"
-        android:background="#330033"
+        android:background="@color/colorPrimaryDark"
         android:textColor="#fefbff"
         android:layout_height="wrap_content"
         android:textSize="30sp"
