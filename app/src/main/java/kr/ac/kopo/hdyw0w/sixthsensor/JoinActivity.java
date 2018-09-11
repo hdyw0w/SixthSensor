@@ -26,18 +26,18 @@ import retrofit2.Retrofit;
 
 public class JoinActivity extends AppCompatActivity {
 
-    private EditText username = (EditText) findViewById(R.id.ja_username);
-    private EditText user_id = (EditText) findViewById(R.id.ja_user_id);
-    private EditText password = (EditText) findViewById(R.id.ja_password);
-    private EditText passwordConfirm = (EditText) findViewById(R.id.ja_passwordconfirm);
-
-    private Button btnSubmit = (Button) findViewById(R.id.ja_btnSubmit);
-    private Button btnmlogin = (Button) findViewById(R.id.ja_btnlogin);
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.join_activity);
+
+        final EditText username = (EditText) findViewById(R.id.ja_username);
+        final EditText user_id = (EditText) findViewById(R.id.ja_user_id);
+        final EditText password = (EditText) findViewById(R.id.ja_password);
+        final EditText passwordConfirm = (EditText) findViewById(R.id.ja_passwordconfirm);
+
+        Button btnSubmit = (Button) findViewById(R.id.ja_btnSubmit);
+        Button btnmlogin = (Button) findViewById(R.id.ja_btnlogin);
 
         // 최소 글자수 제한
         EditText passwordLength = (EditText) findViewById(R.id.ja_password);

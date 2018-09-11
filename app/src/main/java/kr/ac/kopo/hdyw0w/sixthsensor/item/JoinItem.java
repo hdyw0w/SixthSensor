@@ -14,7 +14,7 @@ public class JoinItem {
     private String password;
 
     // Setter
-    public void setUsername(String usernamed){
+    public void setUsername(String username){
         this.username = username;
     }
 
