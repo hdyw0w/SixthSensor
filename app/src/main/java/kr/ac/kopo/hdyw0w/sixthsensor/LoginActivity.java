@@ -45,44 +45,44 @@ public class LoginActivity extends AppCompatActivity {
                             return;
                         }
 
-                        Intent intent_act = new Intent(getApplicationContext(), NavActivity.class);
-                        startActivity(intent_act);
+//                        Intent intent_act = new Intent(getApplicationContext(), NavActivity.class);
+//                        startActivity(intent_act);
 
-//                        Retrofit retrofit = RetrofitService.retrofit;
-//                        RetrofitService service = retrofit.create(RetrofitService.class);
-//                        service.login(user_id, passWd).enqueue(new Callback<LoginItem>() {
-//                            @Override
-//                            public void onResponse(Call<LoginItem> call, Response<LoginItem> response) {
-////                                LoginItem item1 = response.body();
-////                                if (!item1.getUsername().isEmpty())
-////                                    Toast.makeText(LoginActivity.this, item1.getUsername(), Toast.LENGTH_SHORT).show();
-//
-//                                if (response.isSuccessful()) {
-//                                    LoginItem item = response.body();
-//                                    assert item != null;
-//                                    if (item.getStatus().equals("OK")){
-//                                        SharedPreferences preferences = getSharedPreferences(Code.pref_id, 0);
-//                                        SharedPreferences.Editor editor = preferences.edit();
-//                                        editor.putString(Code.pref_user_id, user_id).apply();
-//
-//                                        Toast.makeText(LoginActivity.this, "user_id : " + user_id, Toast.LENGTH_SHORT).show();
-//
-//                                        Intent intent_act = new Intent(getApplicationContext(), NavActivity.class);
-//                                        startActivity(intent_act);
-//                                    } else {
-//                                        Toast.makeText(LoginActivity.this, "다시 시도해주세요1", Toast.LENGTH_SHORT).show();
-//                                    }
-//                                } else {
-//                                    Toast.makeText(LoginActivity.this, "다시 시도해주세요", Toast.LENGTH_SHORT).show();
-//                                }
-//                            }
-//
-//                            @Override
-//                            public void onFailure(Call<LoginItem> call, Throwable t) {
-//                                Log.e("onFailure()", t.getMessage(), t);
-//                                Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
-//                            }
-//                        });
+                        Retrofit retrofit = RetrofitService.retrofit;
+                        RetrofitService service = retrofit.create(RetrofitService.class);
+                        service.login(user_id, passWd).enqueue(new Callback<LoginItem>() {
+                            @Override
+                            public void onResponse(Call<LoginItem> call, Response<LoginItem> response) {
+//                                LoginItem item1 = response.body();
+//                                if (!item1.getUsername().isEmpty())
+//                                    Toast.makeText(LoginActivity.this, item1.getUsername(), Toast.LENGTH_SHORT).show();
+
+                                if (response.isSuccessful()) {
+                                    LoginItem item = response.body();
+                                    assert item != null;
+                                    if (item.getStatus().equals("OK")){
+                                        SharedPreferences preferences = getSharedPreferences(Code.pref_id, 0);
+                                        SharedPreferences.Editor editor = preferences.edit();
+                                        editor.putString(Code.pref_user_id, user_id).apply();
+
+                                        Toast.makeText(LoginActivity.this, "user_id : " + user_id, Toast.LENGTH_SHORT).show();
+
+                                        Intent intent_act = new Intent(getApplicationContext(), NavActivity.class);
+                                        startActivity(intent_act);
+                                    } else {
+                                        Toast.makeText(LoginActivity.this, "다시 시도해주세요1", Toast.LENGTH_SHORT).show();
+                                    }
+                                } else {
+                                    Toast.makeText(LoginActivity.this, "다시 시도해주세요", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+
+                            @Override
+                            public void onFailure(Call<LoginItem> call, Throwable t) {
+                                Log.e("onFailure()", t.getMessage(), t);
+                                Toast.makeText(LoginActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
 
                     }
                 }

@@ -130,28 +130,34 @@ public class JoinActivity extends AppCompatActivity {
                     public void onResponse(Call<JoinItem> call, Response<JoinItem> response) {
                         // 요청 성공 (User 데이터 가져오기)
                         if (response.isSuccessful()) {
-                            try {
-                                JSONObject obj = new JSONObject(response.body().toString());
-                                Toast.makeText(JoinActivity.this, "onResponse is successful\n" + obj.toString(), Toast.LENGTH_SHORT).show();
-                                // 완료시
-                                Toast.makeText(JoinActivity.this, "회원가입이 완료되었습니다!", Toast.LENGTH_SHORT).show();
-                                finish();
+                            JoinItem item = response.body();
+                            assert item != null;
+//                            try {
+//                                JSONObject obj = new JSONObject(item.toString());
+//                                Toast.makeText(JoinActivity.this, "onResponse is successful\n" + obj.toString(), Toast.LENGTH_SHORT).show();
+//                                // 완료시
+//
+//                                Intent intent_act = new Intent(getApplicationContext(), LoginActivity.class);
+//                                startActivity(intent_act);
+//
+//                                Toast.makeText(JoinActivity.this, "회원가입이 완료되었습니다!", Toast.LENGTH_SHORT).show();
+//                                finish();
+//
+//                            } catch (JSONException e) {
+//                                e.printStackTrace();
+//                            }
+
+                            if (item.getStatus().equals("OK")){
 
                                 Intent intent_act = new Intent(getApplicationContext(), LoginActivity.class);
                                 startActivity(intent_act);
 
-                            } catch (JSONException e) {
-                                e.printStackTrace();
+                                Toast.makeText(JoinActivity.this, "회원가입이 완료되었습니다!", Toast.LENGTH_SHORT).show();
+                                finish();
                             }
                         } else {
-                            JSONObject obj = null;
+//                            JSONObject obj = null;
                             Toast.makeText(JoinActivity.this, "onResponse no successful", Toast.LENGTH_SHORT).show();
-//                            try {
-//                                obj = new JSONObject(response.body().string());
-//                                Toast.makeText(JoinActivity.this, "onResponse no successful\n"+obj.toString(), Toast.LENGTH_SHORT).show();
-//                            } catch (JSONException | IOException e) {
-//                                e.printStackTrace();
-//                            }
                         }
                     }
 
