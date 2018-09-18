@@ -4,6 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class JoinItem {
 
+    @SerializedName("status")
+    private String status;
+
     @SerializedName("username")
     private String username;
 
@@ -14,6 +17,10 @@ public class JoinItem {
     private String password;
 
     // Setter
+    public void setStatus(String status){
+        this.status = status;
+    }
+
     public void setUsername(String username){
         this.username = username;
     }
@@ -27,6 +34,10 @@ public class JoinItem {
     }
 
     // Getter
+    public String getStatus(){
+        return status;
+    }
+
     public String getUsername(){
         return username;
     }

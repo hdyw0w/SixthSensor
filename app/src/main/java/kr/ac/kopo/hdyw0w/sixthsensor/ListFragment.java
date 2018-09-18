@@ -2,6 +2,7 @@ package kr.ac.kopo.hdyw0w.sixthsensor;
 
 import android.animation.Animator;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
@@ -15,8 +16,8 @@ import java.util.Objects;
 
 public class ListFragment extends Fragment implements NavActivity.onKeyBackPressedListener {
 
-    FloatingActionButton fil_fab, fil_fab1, fil_fab2, fil_fab3;
-    LinearLayout fabLayout1, fabLayout2, fabLayout3;
+    FloatingActionButton fil_fab, fil_fab1, fil_fab2;
+    LinearLayout fabLayout1, fabLayout2;
     View fabBGLayout;
     private boolean isFABOpen = false;
 
@@ -38,11 +39,9 @@ public class ListFragment extends Fragment implements NavActivity.onKeyBackPress
         View view = inflater.inflate(R.layout.fragment_item_list, container, false);
         fabLayout1 = view.findViewById(R.id.fabLayout1);
         fabLayout2 = view.findViewById(R.id.fabLayout2);
-        fabLayout3 = view.findViewById(R.id.fabLayout3);
         fil_fab = view.findViewById(R.id.fil_fab);
         fil_fab1 = view.findViewById(R.id.fil_fab1);
         fil_fab2 = view.findViewById(R.id.fil_fab2);
-        fil_fab3 = view.findViewById(R.id.fil_fab3);
         fabBGLayout = view.findViewById(R.id.fabBGLayout);
 
         fil_fab.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +62,25 @@ public class ListFragment extends Fragment implements NavActivity.onKeyBackPress
             }
         });
 
+        fil_fab1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent_act = new Intent(getContext(), AddGroupAtivity.class);
+                startActivity(intent_act);
+
+            }
+        });
+
+        fil_fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+            }
+        });
+
         return view;
     }
 
@@ -70,22 +88,19 @@ public class ListFragment extends Fragment implements NavActivity.onKeyBackPress
         isFABOpen = true;
         fabLayout1.setVisibility(View.VISIBLE);
         fabLayout2.setVisibility(View.VISIBLE);
-        fabLayout3.setVisibility(View.VISIBLE);
         fabBGLayout.setVisibility(View.VISIBLE);
 
-        fil_fab.animate().rotationBy(180);
+        fil_fab.animate().rotationBy(45);
         fabLayout1.animate().translationY(-getResources().getDimension(R.dimen.standard_55));
         fabLayout2.animate().translationY(-getResources().getDimension(R.dimen.standard_100));
-        fabLayout3.animate().translationY(-getResources().getDimension(R.dimen.standard_145));
     }
 
     private void closeFABMenu(){
             isFABOpen = false;
             fabBGLayout.setVisibility(View.GONE);
-            fil_fab.animate().rotationBy(-180);
+            fil_fab.animate().rotationBy(-45);
             fabLayout1.animate().translationY(0);
-            fabLayout2.animate().translationY(0);
-            fabLayout3.animate().translationY(0).setListener(new Animator.AnimatorListener() {
+            fabLayout2.animate().translationY(0).setListener(new Animator.AnimatorListener() {
                 @Override
                 public void onAnimationStart(Animator animator) {
 
@@ -96,7 +111,6 @@ public class ListFragment extends Fragment implements NavActivity.onKeyBackPress
                     if (!isFABOpen) {
                         fabLayout1.setVisibility(View.GONE);
                         fabLayout2.setVisibility(View.GONE);
-                        fabLayout3.setVisibility(View.GONE);
                     }
 
                 }
@@ -128,7 +142,32 @@ public class ListFragment extends Fragment implements NavActivity.onKeyBackPress
     public void onDestroy() {
         super.onDestroy();
         Log.e("ListFragment", "onDestroy");
+        isFABOpen = false;
         ((NavActivity) Objects.requireNonNull(getActivity())).setOnKeyBackPressedListener(null);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.e("ListFragment", "onResume()");
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.e("ListFragment", "onStart()");
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.e("ListFragment", "onPause()");
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        Log.e("ListFragment", "onStop()");
     }
 }
 

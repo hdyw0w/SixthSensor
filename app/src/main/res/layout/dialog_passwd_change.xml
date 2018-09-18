@@ -84,6 +84,7 @@
             android:textStyle="bold"
             android:textColor="#f4f4f4"
             android:background="@drawable/rounded_border_button"
+            android:backgroundTint="#cc3333"
             android:id="@+id/dpc_btnCancel"
             />
 

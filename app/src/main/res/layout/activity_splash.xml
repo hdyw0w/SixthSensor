@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="kr.ac.kopo.hdyw0w.sixthsensor.MainActivity"
+    tools:context="kr.ac.kopo.hdyw0w.sixthsensor.SplashActivity"
     android:orientation="vertical"
     android:background="#f4f4f4"
     >
@@ -15,18 +15,7 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_gravity="center"
-        app:srcCompat="@drawable/logo" />
-
-    <Button
-        android:id="@+id/start"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="match_parent"
-        android:height="70dp"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="#fefbff"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:text="@string/start" />
+        android:src="@drawable/logo" />
 
 
 </LinearLayout>

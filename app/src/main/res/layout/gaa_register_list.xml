@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="5dp"
+    >
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="0.5"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_trash_can"
+        android:id="@+id/grl_ic_trash_can"
+        />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:layout_gravity="center_vertical"
+        android:text="ar000001"
+        android:id="@+id/grl_ar_id"
+        />
+
+</LinearLayout>

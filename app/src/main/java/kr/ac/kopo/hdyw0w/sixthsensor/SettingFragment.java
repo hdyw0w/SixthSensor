@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.Toast;
 
 public class SettingFragment extends Fragment implements View.OnClickListener {
@@ -61,7 +60,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(getContext(), "탈퇴 되었습니다, 안녕 :)", Toast.LENGTH_SHORT).show();
-                        Intent intent_act2 = new Intent(getContext(), MainActivity.class);
+                        Intent intent_act2 = new Intent(getContext(), SplashActivity.class);
                         startActivity(intent_act2);
                     }
                 }).setNegativeButton("아니오", null).setMessage("\n회원탈퇴시, 저장된 모든 데이터가 삭제되어 복구가 불가능합니다.\n정말 탈퇴하시겠습니까 ?\n\n비밀번호 입력 ")

@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="kr.ac.kopo.hdyw0w.sixthsensor.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context="kr.ac.kopo.hdyw0w.sixthsensor.SplashActivity"
+    tools:showIn="@layout/activity_splash">
 
 </RelativeLayout>
